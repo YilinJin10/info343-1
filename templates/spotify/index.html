@@ -8,7 +8,7 @@
 <script src="app.js"></script>
 <link href="app.css" type="text/css" />
   <meta charset="utf-8">
-  <title>JS Bin</title>
+  <title>Spotify Challenge!</title>
 </head>
 <body>
   <div ng-app="myApp" ng-controller="myCtrl">
@@ -25,8 +25,13 @@
   <div>
       <div class="container-fixed">
         <p ng-show="tracks.length>0" class="help-block">Click to sample</p>
-        <div ng-class="track.preview_url == currentSong ? 'playing' : ''"  ng-repeat="track in tracks" class="col-xs-4 img"><img ng-click="play(track.preview_url)" title="{{track.name}}" src="{{track.album.images[1].url}}"></img></div>
-    </div>
+        <ul class="list-unstyled">
+            <li ng-class="track.preview_url == currentSong ? 'playing' : ''"  ng-repeat="track in tracks" class="col-xs-4 img">
+              {{track.name}}
+              <img ng-click="play(track.preview_url)" title="{{track.name}}" src="{{track.album.images[1].url}}"></img>
+            </li>
+        </ul>
+      </div>
     </div>
   </div>
   </div>
