@@ -7,7 +7,6 @@ var myCtrl = myApp.controller('myCtrl', function($scope, $http) {
   $scope.getSongs = function() {
     $http.get(baseUrl + $scope.track).success(function(response){
       data = $scope.tracks = response.tracks.items
-      
     })
   }
   $scope.play = function(song) {
@@ -22,6 +21,11 @@ var myCtrl = myApp.controller('myCtrl', function($scope, $http) {
       $scope.audioObject.play()  
       $scope.currentSong = song
     }
+  }
+
+  $scope.order = 'name'
+  $scope.setOrder = function(value) {
+    $scope.order = value
   }
 })
 

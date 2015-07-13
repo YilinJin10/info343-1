@@ -1,18 +1,19 @@
 body {
   padding:10px;
+  background-color: gray;
 }
 
 .img {
   margin-bottom:20px;
   border:1px solid #d3d3d3;
-  padding:10px; 
+  padding:20px; 
   text-align:center;
   box-sizing:border-box;
 }
 
 img {
-  height:100px;
-  width:100px;
+  height:100%;
+  width:100%;
   cursor:pointer;
 }
 
@@ -21,5 +22,10 @@ img {
   margin-left:5%;
   text-align:center;
 }
+
+.playing {
+  border: 5px solid lightblue;
+}
+
 
 
